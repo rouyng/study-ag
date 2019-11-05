@@ -1,5 +1,6 @@
 # Study for an Aeolian Gate
-This repository archives code and documentation for "Study for an Aeolian Gate", an artwork I made in 2013.
+This repository archives code and documentation for "Study for an Aeolian Gate", an artwork I made in 2013. This code
+has been in deep cold storage since then, so it is not actively maintained/modified.
 
 The "study" obtains random numbers from [a quantum random number generator operated by Humboldt
 University of Berlin](https://qrng.physik.hu-berlin.de/). These numbers are taken as input by an Arduino sketch, which uses them to determine activation 
