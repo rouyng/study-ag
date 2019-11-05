@@ -1,0 +1,21 @@
+#include <stdio.h> // fopen()
+#include <stdlib.h> // malloc()
+#include <string.h> // strncpy()
+#include "libQRNG.h"
+
+
+#define MAX_WRITE_BUFFER 50*16*65536
+#define FILENAME_LENGTH 255
+
+#define QRNG_USERNAME_LENGTH 64+1
+#define QRNG_PASSWORD_LENGTH 64+1
+
+typedef enum _qrng_download_rc {
+	QRNG_DOWNLOAD_SUCCESS = 0,
+	QRNG_DOWNLOAD_INVALID_SIZE,
+	QRNG_DOWNLOAD_MALLOC_FAILED,
+	QRNG_DOWNLOAD_FOPEN_FAILED,
+	QRNG_DOWNLOAD_CONNECT_SSL_FAILED,
+	QRNG_DOWNLOAD_CONNECT_FAILED,
+	QRNG_DOWNLOAD_FWRITE_FAILED
+} qrng_download_rc;
